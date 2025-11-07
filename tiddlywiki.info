@@ -13,5 +13,6 @@
             "$:/core/save/all",
             "index.html",
             "text/plain"
+        ]
     }
 }
