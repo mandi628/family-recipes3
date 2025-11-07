@@ -1,9 +1,6 @@
 {
     "description": "Aumann Family Recipes",
     "plugins": [
-        "tiddlywiki/tiddlyweb",
-        "tiddlywiki/filesystem",
-        "tiddlywiki/highlight";
         "tiddlywiki/github-saver"
     ],
     "themes": [
@@ -13,9 +10,8 @@
     "build": {
         "index": [
             "--rendertiddler",
-            "$:core/save/all",
+            "$:/core/save/all",
             "index.html",
             "text/plain"
-        ],
     }
 }
