@@ -13,6 +13,7 @@ straightforward as possible.
 ### Added
  
 ### Changed
+- Converted from single-page TiddlyWiki to client-server edition (2025.11.05)
  
 ### Fixed
  
