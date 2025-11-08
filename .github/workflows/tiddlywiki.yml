@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -14,10 +14,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to GitHub Pages 
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./
-          force_orphan: true
+          branch: gh-pages # The branch the action should deploy to.
+          folder: . # The folder the action should deploy.
+          single-commit: true # This will remove the history of the gh-pages branch and create a single commit.
